@@ -7,15 +7,16 @@ export function Hero() {
         <p className="hero__greeting">{'// Hola, mundo'}</p>
 
         <h1 className="hero__title">
-          Soy <span className="hero__name">Samuel Mesa Zapata</span>
+          Somos <span className="hero__name">Samuel &amp; Emmanuel</span>
         </h1>
 
-        <h2 className="hero__role">Desarrollador Web Full-Stack</h2>
+        <h2 className="hero__role">Equipo Web + Data Analytics</h2>
 
         <p className="hero__description">
-          Construyo experiencias web modernas con React y herramientas de DevOps.
-          Me apasionan la arquitectura limpia, el código mantenible y los pipelines
-          de integración bien diseñados.
+          Construimos productos donde el código y los datos se encuentran. Samuel desarrolla
+          experiencias web modernas con React y aplica buenas prácticas de DevOps; Emmanuel
+          extrae insights de los datos con Python y herramientas de análisis. Juntos hacemos
+          que las decisiones sean más informadas.
         </p>
 
         <div className="hero__cta">
@@ -23,7 +24,7 @@ export function Hero() {
             Ver proyectos
           </a>
           <a href="#contact" className="hero__button hero__button--secondary">
-            Contactarme
+            Contactanos
           </a>
         </div>
       </div>
