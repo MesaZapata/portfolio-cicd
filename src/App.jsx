@@ -1,9 +1,10 @@
+import { Header } from './components/Header';
 import './App.css';
 
 function App() {
   return (
     <div className="app">
-      {/* Header → PR #1 (feature/header) */}
+      <Header />
 
       <main className="app__main">
         {/* Hero → PR #2 (feature/hero) */}
