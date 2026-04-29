@@ -1,5 +1,6 @@
 import { Header } from './components/Header';
 import { Hero } from './components/Hero';
+import { Skills } from './components/Skills';
 import './App.css';
 
 function App() {
@@ -9,7 +10,7 @@ function App() {
 
       <main className="app__main">
         <Hero />
-        {/* Skills → PR #3 (feature/skills) */}
+        <Skills />
         {/* Projects → PR #4 (feature/projects) */}
       </main>
 
