@@ -87,7 +87,7 @@ git push → GitHub → webhook → Netlify
 | # | Componente | Rama | Autor (PR) | Descripción |
 |---|---|---|---|---|
 | 1 | Header   | `feature/header`   | Samuel Mesa Zapata | Barra de navegación sticky con efecto glass (backdrop-blur). Logo monoespaciado con tipografía de código y links suaves a las secciones. Responsive a partir de 640px. |
-| 2 | Hero     | `feature/hero`     | Samuel Mesa Zapata | _(se completa al implementar)_ |
+| 2 | Hero     | `feature/hero`     | Samuel Mesa Zapata | Sección de presentación con saludo en estilo código, nombre destacado en color de marca, rol, descripción y dos CTA (proyectos y contacto). Glow radial decorativo de fondo y animación al hover en los botones. |
 | 3 | Skills   | `feature/skills`   | Samuel Mesa Zapata | _(se completa al implementar)_ |
 | 4 | Projects | `feature/projects` | Samuel Mesa Zapata | _(se completa al implementar)_ |
 | 5 | Footer   | `feature/footer`   | Samuel Mesa Zapata | _(se completa al implementar)_ |
