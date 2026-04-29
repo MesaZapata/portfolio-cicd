@@ -1,0 +1,117 @@
+.footer {
+  margin-top: var(--space-8);
+  padding: var(--space-8) var(--space-3) var(--space-4);
+  background-color: var(--color-surface);
+  border-top: 1px solid var(--color-border);
+}
+
+.footer__container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.footer__head {
+  margin-bottom: var(--space-6);
+  max-width: 720px;
+}
+
+.footer__eyebrow {
+  font-family: var(--font-mono);
+  color: var(--color-accent);
+  font-size: 1rem;
+  margin-bottom: var(--space-1);
+}
+
+.footer__title {
+  font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-2);
+}
+
+.footer__intro {
+  color: var(--color-text-muted);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+}
+
+.footer__team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-3);
+  margin-bottom: var(--space-6);
+}
+
+.footer__card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  transition: border-color var(--transition);
+}
+
+.footer__card:hover {
+  border-color: var(--color-accent);
+}
+
+.footer__name {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 4px;
+}
+
+.footer__role {
+  font-family: var(--font-mono);
+  font-size: 0.8125rem;
+  color: var(--color-accent);
+  margin-bottom: var(--space-2);
+}
+
+.footer__link {
+  display: inline-block;
+  font-family: var(--font-mono);
+  font-size: 0.9375rem;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  padding: var(--space-1) var(--space-2);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+
+.footer__link:hover {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  background-color: var(--color-accent-soft);
+}
+
+.footer__bottom {
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--color-border);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer__copy {
+  color: var(--color-text);
+  font-size: 0.875rem;
+}
+
+.footer__meta {
+  color: var(--color-text-muted);
+  font-size: 0.8125rem;
+  font-family: var(--font-mono);
+}
+
+@media (max-width: 640px) {
+  .footer {
+    padding: var(--space-6) var(--space-2) var(--space-3);
+  }
+
+  .footer__team {
+    grid-template-columns: 1fr;
+  }
+}
