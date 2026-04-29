@@ -1,4 +1,6 @@
 import './Projects.css';
+import { useScrollReveal } from '../hooks/useScrollReveal';
+import { useTilt } from '../hooks/useTilt';
 
 const PROJECTS = [
   {
@@ -40,9 +42,86 @@ const PROJECTS = [
   },
 ];
 
-export function Projects() {
+function ProjectCard({ project, index }) {
+  const { ref, onMouseMove, onMouseLeave } = useTilt({
+    max: project.featured ? 4 : 7,
+    scale: 1.01,
+  });
+
   return (
-    <section id="projects" className="projects">
+    <article
+      ref={ref}
+      onMouseMove={onMouseMove}
+      onMouseLeave={onMouseLeave}
+      className={`projects__card ${
+        project.featured ? 'projects__card--featured' : ''
+      }`}
+    >
+      <div className="projects__card-glow" aria-hidden="true"></div>
+
+      <header className="projects__card-head">
+        <span className="projects__num">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <span className="projects__year">{project.year}</span>
+      </header>
+
+      <div className="projects__card-body">
+        <span className="projects__role">{project.role}</span>
+        <h3 className="projects__card-title">{project.title}</h3>
+        <p className="projects__card-description">{project.description}</p>
+        <ul className="projects__tags">
+          {project.tags.map((tag) => (
+            <li key={tag} className="projects__tag">
+              {tag}
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {(project.links.github || project.links.live) && (
+        <footer className="projects__card-footer">
+          {project.links.github && (
+            <a
+              href={project.links.github}
+              className="projects__link"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Source</span>
+              <span className="projects__link-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          )}
+          {project.links.live && (
+            <a
+              href={project.links.live}
+              className="projects__link projects__link--primary"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span>Live</span>
+              <span className="projects__link-arrow" aria-hidden="true">
+                ↗
+              </span>
+            </a>
+          )}
+        </footer>
+      )}
+    </article>
+  );
+}
+
+export function Projects() {
+  const { ref, visible } = useScrollReveal();
+
+  return (
+    <section
+      ref={ref}
+      id="projects"
+      className={`projects ${visible ? 'is-revealed' : ''}`}
+    >
       <header className="projects__header">
         <p className="projects__eyebrow">
           <span className="projects__eyebrow-dash" aria-hidden="true"></span>
@@ -59,59 +138,7 @@ export function Projects() {
 
       <div className="projects__grid">
         {PROJECTS.map((project, index) => (
-          <article
-            key={project.title}
-            className={`projects__card ${
-              project.featured ? 'projects__card--featured' : ''
-            }`}
-          >
-            <header className="projects__card-head">
-              <span className="projects__num">
-                {String(index + 1).padStart(2, '0')}
-              </span>
-              <span className="projects__year">{project.year}</span>
-            </header>
-
-            <div className="projects__card-body">
-              <span className="projects__role">{project.role}</span>
-              <h3 className="projects__card-title">{project.title}</h3>
-              <p className="projects__card-description">
-                {project.description}
-              </p>
-              <ul className="projects__tags">
-                {project.tags.map((tag) => (
-                  <li key={tag} className="projects__tag">
-                    {tag}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {(project.links.github || project.links.live) && (
-              <footer className="projects__card-footer">
-                {project.links.github && (
-                  <a
-                    href={project.links.github}
-                    className="projects__link"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Source ↗
-                  </a>
-                )}
-                {project.links.live && (
-                  <a
-                    href={project.links.live}
-                    className="projects__link projects__link--primary"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Live ↗
-                  </a>
-                )}
-              </footer>
-            )}
-          </article>
+          <ProjectCard key={project.title} project={project} index={index} />
         ))}
       </div>
     </section>
