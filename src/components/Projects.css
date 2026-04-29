@@ -32,6 +32,11 @@
   width: 32px;
   height: 1px;
   background-color: var(--color-accent);
+  box-shadow: var(--glow-cyan-sm);
+}
+
+.projects__eyebrow {
+  text-shadow: var(--text-glow-cyan);
 }
 
 .projects__title {
@@ -47,6 +52,7 @@
   font-style: italic;
   font-weight: 400;
   color: var(--color-accent);
+  text-shadow: var(--text-glow-cyan);
 }
 
 .projects__intro {
@@ -185,6 +191,28 @@
   border: 1px solid var(--color-border-accent);
   border-radius: var(--radius-full);
   background-color: var(--color-accent-faint);
+  text-shadow: var(--text-glow-cyan);
+  box-shadow: var(--glow-cyan-sm);
+}
+
+.projects__card:nth-child(2) .projects__role {
+  color: var(--color-secondary);
+  border-color: var(--color-border-secondary);
+  background-color: var(--color-secondary-faint);
+  text-shadow: var(--text-glow-magenta);
+  box-shadow: var(--glow-magenta);
+}
+
+.projects__card:nth-child(2) .projects__card-glow {
+  background: radial-gradient(
+    500px circle at var(--tilt-mx, 50%) var(--tilt-my, 50%),
+    var(--color-secondary-soft),
+    transparent 40%
+  );
+}
+
+.projects__card:nth-child(2):hover {
+  border-color: var(--color-border-secondary);
 }
 
 .projects__card-title {
@@ -261,6 +289,7 @@
 
 .projects__link--primary {
   color: var(--color-accent);
+  text-shadow: var(--text-glow-cyan);
 }
 
 .projects__link--primary:hover {

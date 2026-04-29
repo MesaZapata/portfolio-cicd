@@ -64,6 +64,12 @@
   color: var(--color-accent);
   font-size: 0.625em;
   font-style: normal;
+  text-shadow: var(--text-glow-cyan);
+}
+
+.marquee__item:nth-child(even) .marquee__dot {
+  color: var(--color-secondary);
+  text-shadow: var(--text-glow-magenta);
 }
 
 @media (prefers-reduced-motion: reduce) {

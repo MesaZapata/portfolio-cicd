@@ -2,9 +2,9 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(10, 10, 12, 0.7);
-  backdrop-filter: blur(16px) saturate(140%);
-  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  background-color: rgba(3, 3, 10, 0.7);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid var(--color-border);
 }
 
@@ -24,6 +24,7 @@
   gap: 2px;
   font-family: var(--font-display);
   font-size: 1.5rem;
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: var(--color-text);
   transition: color var(--transition);
@@ -35,12 +36,13 @@
 
 .header__logo-letter {
   font-style: italic;
-  font-weight: 400;
+  font-weight: 500;
 }
 
 .header__logo-amp {
   font-style: italic;
-  color: var(--color-accent);
+  color: var(--color-secondary);
+  text-shadow: var(--text-glow-magenta);
   margin: 0 1px;
 }
 
@@ -79,15 +81,17 @@
   width: 0;
   height: 1px;
   background-color: var(--color-accent);
+  box-shadow: var(--glow-cyan-sm);
   transition: width var(--transition);
 }
 
 .header__link:hover {
-  color: var(--color-text);
+  color: var(--color-accent);
+  text-shadow: var(--text-glow-cyan);
 }
 
 .header__link:hover .header__link-num {
-  color: var(--color-accent);
+  color: var(--color-secondary);
 }
 
 .header__link:hover::before {
@@ -104,12 +108,13 @@
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--color-text-soft);
-  background-color: var(--color-surface);
+  background-color: rgba(0, 255, 170, 0.04);
   transition: border-color var(--transition);
 }
 
 .header__status:hover {
-  border-color: var(--color-border-strong);
+  border-color: var(--color-success);
+  box-shadow: var(--glow-success);
 }
 
 .header__status-dot {
@@ -117,6 +122,7 @@
   height: 8px;
   border-radius: 50%;
   background-color: var(--color-success);
+  box-shadow: var(--glow-success);
   position: relative;
   flex-shrink: 0;
 }
@@ -134,7 +140,7 @@
 @keyframes ping {
   0% {
     transform: scale(1);
-    opacity: 0.4;
+    opacity: 0.5;
   }
   75%, 100% {
     transform: scale(2);

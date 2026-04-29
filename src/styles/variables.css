@@ -1,44 +1,76 @@
 :root {
-  /* ============== PALETTE ============== */
-  /* Cool dark base */
-  --color-bg: #0a0a0c;
-  --color-bg-soft: #0e0e11;
-  --color-surface: #131316;
-  --color-surface-hover: #18181c;
-  --color-elevated: #1c1c20;
+  /* ============== PALETTE — NEON ============== */
+  /* Deep navy-black base */
+  --color-bg: #03030a;
+  --color-bg-soft: #07071a;
+  --color-surface: #0a0a1f;
+  --color-surface-hover: #11112c;
+  --color-elevated: #14143a;
 
   /* Borders */
-  --color-border: #1f1f23;
-  --color-border-strong: #2a2a30;
-  --color-border-accent: rgba(244, 162, 97, 0.4);
+  --color-border: #1a1a3d;
+  --color-border-strong: #2a2a5c;
+  --color-border-accent: rgba(24, 255, 255, 0.45);
+  --color-border-secondary: rgba(255, 46, 108, 0.4);
 
   /* Text */
-  --color-text: #ededee;
-  --color-text-soft: #b8b8bd;
-  --color-text-muted: #7a7a7d;
-  --color-text-faint: #4f4f54;
+  --color-text: #ebebff;
+  --color-text-soft: #b3b3d9;
+  --color-text-muted: #6868a3;
+  --color-text-faint: #3d3d65;
 
-  /* Accent — warm sand */
-  --color-accent: #f4a261;
-  --color-accent-hover: #ffb878;
-  --color-accent-soft: rgba(244, 162, 97, 0.12);
-  --color-accent-faint: rgba(244, 162, 97, 0.05);
-  --color-accent-text: #1a0e05;
+  /* Primary neon — electric cyan */
+  --color-accent: #18ffff;
+  --color-accent-hover: #5cffff;
+  --color-accent-soft: rgba(24, 255, 255, 0.12);
+  --color-accent-faint: rgba(24, 255, 255, 0.05);
+  --color-accent-text: #001019;
 
-  /* Secondary accent */
-  --color-secondary: #5b9eff;
-  --color-secondary-soft: rgba(91, 158, 255, 0.1);
+  /* Secondary neon — hot magenta */
+  --color-secondary: #ff2e6c;
+  --color-secondary-hover: #ff5d8a;
+  --color-secondary-soft: rgba(255, 46, 108, 0.12);
+  --color-secondary-faint: rgba(255, 46, 108, 0.05);
 
-  /* Status */
-  --color-success: #4ade80;
-  --color-success-soft: rgba(74, 222, 128, 0.12);
+  /* Tertiary — neon violet */
+  --color-tertiary: #9d4edd;
+
+  /* Success — neon mint */
+  --color-success: #00ffaa;
+  --color-success-soft: rgba(0, 255, 170, 0.18);
+
+  /* ============== NEON GLOWS ============== */
+  --glow-cyan-sm: 0 0 8px rgba(24, 255, 255, 0.5);
+  --glow-cyan:
+    0 0 16px rgba(24, 255, 255, 0.5),
+    0 0 32px rgba(24, 255, 255, 0.25);
+  --glow-cyan-lg:
+    0 0 24px rgba(24, 255, 255, 0.7),
+    0 0 48px rgba(24, 255, 255, 0.35),
+    0 0 80px rgba(24, 255, 255, 0.15);
+
+  --glow-magenta:
+    0 0 16px rgba(255, 46, 108, 0.55),
+    0 0 32px rgba(255, 46, 108, 0.3);
+  --glow-magenta-lg:
+    0 0 24px rgba(255, 46, 108, 0.7),
+    0 0 48px rgba(255, 46, 108, 0.35);
+
+  --glow-success:
+    0 0 12px rgba(0, 255, 170, 0.6),
+    0 0 24px rgba(0, 255, 170, 0.3);
+
+  --text-glow-cyan: 0 0 12px rgba(24, 255, 255, 0.6),
+    0 0 24px rgba(24, 255, 255, 0.3);
+  --text-glow-magenta: 0 0 12px rgba(255, 46, 108, 0.6),
+    0 0 24px rgba(255, 46, 108, 0.3);
 
   /* ============== TYPOGRAPHY ============== */
-  --font-display: 'Instrument Serif', 'Times New Roman', serif;
-  --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
-  --font-mono: 'Geist Mono', 'SF Mono', Consolas, monospace;
+  --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
+  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
 
-  /* ============== SPACING (8px base) ============== */
+  /* ============== SPACING ============== */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
@@ -73,8 +105,8 @@
   --transition-slow: 400ms var(--ease-out);
 
   /* ============== SHADOWS ============== */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.5), 0 2px 8px -2px rgba(0, 0, 0, 0.3);
-  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.7);
-  --shadow-glow: 0 0 80px rgba(244, 162, 97, 0.15);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
+  --shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.6),
+    0 2px 8px -2px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
 }

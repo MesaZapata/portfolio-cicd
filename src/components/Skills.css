@@ -32,6 +32,11 @@
   width: 32px;
   height: 1px;
   background-color: var(--color-accent);
+  box-shadow: var(--glow-cyan-sm);
+}
+
+.skills__eyebrow {
+  text-shadow: var(--text-glow-cyan);
 }
 
 .skills__title {
@@ -47,6 +52,7 @@
   font-style: italic;
   font-weight: 400;
   color: var(--color-accent);
+  text-shadow: var(--text-glow-cyan);
 }
 
 .skills__intro {
@@ -217,7 +223,34 @@
   background: linear-gradient(135deg, var(--color-accent), var(--color-accent-hover));
   padding: 4px 10px;
   border-radius: var(--radius-full);
-  box-shadow: 0 4px 12px -4px rgba(244, 162, 97, 0.4);
+  box-shadow: var(--glow-cyan-sm);
+}
+
+.skills__card:nth-child(2) .skills__primary-pill {
+  background: linear-gradient(135deg, var(--color-secondary), var(--color-secondary-hover));
+  color: white;
+  box-shadow: var(--glow-magenta);
+}
+
+.skills__card:nth-child(2) .skills__avatar {
+  border-color: var(--color-border-secondary);
+  background:
+    radial-gradient(circle at 30% 30%, var(--color-secondary-soft), transparent 60%),
+    var(--color-bg-soft);
+  color: var(--color-secondary);
+  text-shadow: var(--text-glow-magenta);
+}
+
+.skills__card:nth-child(2) .skills__card-glow {
+  background: radial-gradient(
+    400px circle at var(--tilt-mx, 50%) var(--tilt-my, 50%),
+    var(--color-secondary-soft),
+    transparent 40%
+  );
+}
+
+.skills__card:nth-child(2):hover {
+  border-color: var(--color-border-secondary);
 }
 
 .skills__list {
@@ -245,6 +278,7 @@
   color: var(--color-accent);
   border-color: var(--color-border-accent);
   background-color: var(--color-accent-faint);
+  box-shadow: var(--glow-cyan-sm);
 }
 
 @media (max-width: 640px) {
