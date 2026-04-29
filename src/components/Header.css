@@ -2,89 +2,161 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(10, 14, 39, 0.85);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(10, 10, 12, 0.7);
+  backdrop-filter: blur(16px) saturate(140%);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
   border-bottom: 1px solid var(--color-border);
 }
 
-.header__container {
+.header__inner {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: var(--space-2) var(--space-3);
-  display: flex;
+  padding: var(--space-2) var(--content-padding);
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  gap: var(--space-3);
+  gap: var(--space-4);
 }
 
 .header__logo {
-  font-family: var(--font-mono);
-  font-size: 1.125rem;
-  font-weight: 600;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 2px;
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  letter-spacing: -0.02em;
   color: var(--color-text);
-  text-decoration: none;
-  letter-spacing: 0.05em;
-  transition: opacity var(--transition);
-}
-
-.header__logo:hover {
-  opacity: 0.8;
-}
-
-.header__logo-bracket {
-  color: var(--color-accent);
-  font-weight: 400;
-}
-
-.header__nav-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-  gap: var(--space-3);
-}
-
-.header__nav-link {
-  color: var(--color-text-muted);
-  text-decoration: none;
-  font-size: 0.9375rem;
-  font-weight: 500;
-  padding: var(--space-1) 0;
-  position: relative;
   transition: color var(--transition);
 }
 
-.header__nav-link::after {
+.header__logo:hover {
+  color: var(--color-accent);
+}
+
+.header__logo-letter {
+  font-style: italic;
+  font-weight: 400;
+}
+
+.header__logo-amp {
+  font-style: italic;
+  color: var(--color-accent);
+  margin: 0 1px;
+}
+
+.header__nav {
+  display: flex;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+.header__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  letter-spacing: -0.01em;
+  position: relative;
+  padding: 6px 0;
+  transition: color var(--transition);
+}
+
+.header__link-num {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  color: var(--color-text-faint);
+  letter-spacing: 0;
+  transition: color var(--transition);
+}
+
+.header__link::before {
   content: '';
   position: absolute;
   bottom: 0;
   left: 0;
   width: 0;
-  height: 2px;
+  height: 1px;
   background-color: var(--color-accent);
   transition: width var(--transition);
 }
 
-.header__nav-link:hover {
+.header__link:hover {
   color: var(--color-text);
 }
 
-.header__nav-link:hover::after {
+.header__link:hover .header__link-num {
+  color: var(--color-accent);
+}
+
+.header__link:hover::before {
   width: 100%;
 }
 
+.header__status {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-text-soft);
+  background-color: var(--color-surface);
+  transition: border-color var(--transition);
+}
+
+.header__status:hover {
+  border-color: var(--color-border-strong);
+}
+
+.header__status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  position: relative;
+  flex-shrink: 0;
+}
+
+.header__status-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background-color: var(--color-success);
+  opacity: 0.4;
+  animation: ping 1.8s var(--ease-out) infinite;
+}
+
+@keyframes ping {
+  0% {
+    transform: scale(1);
+    opacity: 0.4;
+  }
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .header__inner {
+    grid-template-columns: auto 1fr;
+  }
+  .header__nav {
+    display: none;
+  }
+}
+
 @media (max-width: 640px) {
-  .header__container {
+  .header__inner {
     padding: var(--space-2);
-    gap: var(--space-2);
   }
-
-  .header__nav-list {
-    gap: var(--space-2);
-  }
-
-  .header__nav-link {
-    font-size: 0.875rem;
+  .header__status {
+    padding: 4px 10px;
+    font-size: 0.6875rem;
   }
 }

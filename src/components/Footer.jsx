@@ -3,7 +3,7 @@ import './Footer.css';
 const TEAM = [
   {
     name: 'Samuel Mesa Zapata',
-    role: 'Frontend & DevOps',
+    role: 'Frontend · DevOps',
     githubUser: 'MesaZapata',
   },
   {
@@ -18,39 +18,51 @@ export function Footer() {
 
   return (
     <footer id="contact" className="footer">
-      <div className="footer__container">
-        <div className="footer__head">
-          <p className="footer__eyebrow">{'// Hablemos'}</p>
-          <h2 className="footer__title">¿Te interesa colaborar?</h2>
+      <div className="footer__inner">
+        <div className="footer__cta">
+          <p className="footer__eyebrow">
+            <span className="footer__eyebrow-dash" aria-hidden="true"></span>
+            04 — Hablemos
+          </p>
+          <h2 className="footer__title">
+            ¿Tenés algo en mente? <em className="footer__display">Construyámoslo</em>.
+          </h2>
           <p className="footer__intro">
-            Estamos abiertos a oportunidades de desarrollo, análisis de datos o trabajo
-            en equipo sobre productos donde el código y los datos se encuentran.
+            Estamos abiertos a oportunidades de desarrollo, análisis de datos o
+            colaboraciones donde el código y los datos se encuentran.
           </p>
         </div>
 
         <div className="footer__team">
           {TEAM.map((member) => (
-            <article key={member.name} className="footer__card">
-              <h3 className="footer__name">{member.name}</h3>
-              <p className="footer__role">{member.role}</p>
-              <a
-                href={`https://github.com/${member.githubUser}`}
-                className="footer__link"
-                target="_blank"
-                rel="noreferrer"
-              >
-                @{member.githubUser} →
-              </a>
-            </article>
+            <a
+              key={member.name}
+              href={`https://github.com/${member.githubUser}`}
+              className="footer__member"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <div className="footer__member-info">
+                <p className="footer__member-role">{member.role}</p>
+                <h3 className="footer__member-name">{member.name}</h3>
+                <p className="footer__member-handle">
+                  @{member.githubUser}
+                </p>
+              </div>
+              <span className="footer__member-arrow" aria-hidden="true">
+                →
+              </span>
+            </a>
           ))}
         </div>
 
         <div className="footer__bottom">
           <p className="footer__copy">
-            © {year} Samuel Mesa Zapata &amp; Emmanuel Quintero Gil
+            <span className="footer__copy-mark">©</span> {year} S&amp;E ·
+            Samuel Mesa Zapata &amp; Emmanuel Quintero Gil
           </p>
           <p className="footer__meta">
-            Construido con React + Vite, desplegado en Netlify · Módulo CI/CD
+            Construido con React + Vite · Desplegado en Netlify · Módulo CI/CD
           </p>
         </div>
       </div>

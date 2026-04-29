@@ -1,28 +1,80 @@
 :root {
-  --color-bg: #0a0e27;
-  --color-surface: #131a3a;
-  --color-text: #e4e6f1;
-  --color-text-muted: #8892b0;
-  --color-accent: #64ffda;
-  --color-accent-soft: rgba(100, 255, 218, 0.12);
-  --color-border: #233554;
+  /* ============== PALETTE ============== */
+  /* Cool dark base */
+  --color-bg: #0a0a0c;
+  --color-bg-soft: #0e0e11;
+  --color-surface: #131316;
+  --color-surface-hover: #18181c;
+  --color-elevated: #1c1c20;
 
-  --font-heading: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, Consolas, monospace;
+  /* Borders */
+  --color-border: #1f1f23;
+  --color-border-strong: #2a2a30;
+  --color-border-accent: rgba(244, 162, 97, 0.4);
 
+  /* Text */
+  --color-text: #ededee;
+  --color-text-soft: #b8b8bd;
+  --color-text-muted: #7a7a7d;
+  --color-text-faint: #4f4f54;
+
+  /* Accent — warm sand */
+  --color-accent: #f4a261;
+  --color-accent-hover: #ffb878;
+  --color-accent-soft: rgba(244, 162, 97, 0.12);
+  --color-accent-faint: rgba(244, 162, 97, 0.05);
+  --color-accent-text: #1a0e05;
+
+  /* Secondary accent */
+  --color-secondary: #5b9eff;
+  --color-secondary-soft: rgba(91, 158, 255, 0.1);
+
+  /* Status */
+  --color-success: #4ade80;
+  --color-success-soft: rgba(74, 222, 128, 0.12);
+
+  /* ============== TYPOGRAPHY ============== */
+  --font-display: 'Instrument Serif', 'Times New Roman', serif;
+  --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', 'SF Mono', Consolas, monospace;
+
+  /* ============== SPACING (8px base) ============== */
   --space-1: 0.5rem;
   --space-2: 1rem;
   --space-3: 1.5rem;
   --space-4: 2rem;
+  --space-5: 2.5rem;
   --space-6: 3rem;
   --space-8: 4rem;
+  --space-10: 5rem;
   --space-12: 6rem;
+  --space-16: 8rem;
+  --space-20: 10rem;
+  --space-24: 12rem;
 
+  /* ============== LAYOUT ============== */
   --max-width: 1200px;
-  --radius: 8px;
-  --radius-lg: 16px;
+  --max-width-narrow: 760px;
+  --content-padding: clamp(1.25rem, 4vw, 2.5rem);
 
-  --transition: 200ms ease;
-  --shadow: 0 10px 30px -15px rgba(2, 12, 27, 0.7);
+  /* ============== RADIUS ============== */
+  --radius-sm: 4px;
+  --radius: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 24px;
+  --radius-full: 999px;
+
+  /* ============== MOTION ============== */
+  --ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --transition: 200ms var(--ease);
+  --transition-slow: 400ms var(--ease-out);
+
+  /* ============== SHADOWS ============== */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.5), 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 80px rgba(244, 162, 97, 0.15);
 }
