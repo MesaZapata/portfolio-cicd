@@ -103,8 +103,8 @@ pnpm lint     # corre ESLint
 
 ## Despliegue
 
-- **Producción:** _(URL de Netlify se agrega tras el primer deploy)_
-- **Repositorio:** _(URL de GitHub se agrega tras crear el repo)_
+- **Producción:** https://portfoliocicd.netlify.app/
+- **Repositorio:** https://github.com/MesaZapata/portfolio-cicd
 
 ---
 
