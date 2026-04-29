@@ -90,7 +90,7 @@ git push → GitHub → webhook → Netlify
 | 2 | Hero     | `feature/hero`     | Samuel Mesa Zapata | Sección de presentación con saludo en estilo código, nombre destacado en color de marca, rol, descripción y dos CTA (proyectos y contacto). Glow radial decorativo de fondo y animación al hover en los botones. |
 | 3 | Skills   | `feature/skills`   | Samuel Mesa Zapata + Emmanuel Quintero Gil | Sección de equipo con dos tarjetas (una por miembro), cada una con avatar de iniciales, nombre, rol y stack técnico complementario (Frontend & DevOps + Data Analytics). |
 | 4 | Projects | `feature/projects` | Samuel Mesa Zapata + Emmanuel Quintero Gil | Grilla de proyectos con tarjetas que incluyen rol/autor (Equipo o individual), título, descripción, tags de tecnologías y links a GitHub y demo en vivo cuando aplican. |
-| 5 | Footer   | `feature/footer`   | Samuel Mesa Zapata | _(se completa al implementar)_ |
+| 5 | Footer   | `feature/footer`   | Samuel Mesa Zapata + Emmanuel Quintero Gil | Footer con CTA de contacto, dos tarjetas con los miembros del equipo (rol + link a GitHub), copyright dinámico y línea de meta con el stack del sitio. |
 
 ## Scripts disponibles
 
