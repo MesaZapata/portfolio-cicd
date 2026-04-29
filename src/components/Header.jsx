@@ -6,7 +6,7 @@ export function Header() {
       <div className="header__container">
         <a href="#top" className="header__logo" aria-label="Inicio">
           <span className="header__logo-bracket">&lt;</span>
-          SMZ
+          S&amp;E
           <span className="header__logo-bracket">/&gt;</span>
         </a>
 
