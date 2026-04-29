@@ -12,34 +12,3 @@
   margin: 0 auto;
   padding: 0 var(--content-padding);
 }
-
-.app__cursor {
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 1;
-  background:
-    radial-gradient(
-      480px circle at var(--cursor-x, 50%) var(--cursor-y, 50%),
-      rgba(24, 255, 255, 0.1),
-      transparent 60%
-    ),
-    radial-gradient(
-      280px circle at var(--cursor-x, 50%) var(--cursor-y, 50%),
-      rgba(24, 255, 255, 0.06),
-      transparent 70%
-    );
-  opacity: 0;
-  transition: opacity 300ms var(--ease-out);
-  mix-blend-mode: screen;
-}
-
-.has-cursor .app__cursor {
-  opacity: 1;
-}
-
-@media (hover: none) {
-  .app__cursor {
-    display: none;
-  }
-}

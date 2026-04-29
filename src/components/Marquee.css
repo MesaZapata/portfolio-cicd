@@ -43,17 +43,17 @@
   display: inline-flex;
   align-items: center;
   gap: var(--space-4);
-  font-family: var(--font-display);
+  font-family: var(--font-mono);
   font-style: italic;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
+  font-size: clamp(1.125rem, 2vw, 1.75rem);
   font-weight: 400;
-  color: var(--color-text-soft);
-  letter-spacing: -0.02em;
+  color: var(--color-text-muted);
+  letter-spacing: -0.01em;
   transition: color var(--transition);
 }
 
 .marquee__item:hover {
-  color: var(--color-accent);
+  color: var(--color-text);
 }
 
 .marquee__text {
@@ -61,15 +61,13 @@
 }
 
 .marquee__dot {
-  color: var(--color-accent);
+  color: var(--color-text-faint);
   font-size: 0.625em;
   font-style: normal;
-  text-shadow: var(--text-glow-cyan);
 }
 
 .marquee__item:nth-child(even) .marquee__dot {
-  color: var(--color-secondary);
-  text-shadow: var(--text-glow-magenta);
+  color: var(--color-text-faint);
 }
 
 @media (prefers-reduced-motion: reduce) {

@@ -2,7 +2,7 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background-color: rgba(3, 3, 10, 0.7);
+  background-color: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(16px) saturate(180%);
   -webkit-backdrop-filter: blur(16px) saturate(180%);
   border-bottom: 1px solid var(--color-border);
@@ -23,26 +23,24 @@
   align-items: baseline;
   gap: 2px;
   font-family: var(--font-display);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.03em;
   color: var(--color-text);
-  transition: color var(--transition);
+  transition: opacity var(--transition);
 }
 
 .header__logo:hover {
-  color: var(--color-accent);
+  opacity: 0.7;
 }
 
 .header__logo-letter {
-  font-style: italic;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .header__logo-amp {
-  font-style: italic;
-  color: var(--color-secondary);
-  text-shadow: var(--text-glow-magenta);
+  color: var(--color-text-muted);
+  font-weight: 400;
   margin: 0 1px;
 }
 
@@ -80,18 +78,16 @@
   left: 0;
   width: 0;
   height: 1px;
-  background-color: var(--color-accent);
-  box-shadow: var(--glow-cyan-sm);
+  background-color: var(--color-text);
   transition: width var(--transition);
 }
 
 .header__link:hover {
-  color: var(--color-accent);
-  text-shadow: var(--text-glow-cyan);
+  color: var(--color-text);
 }
 
 .header__link:hover .header__link-num {
-  color: var(--color-secondary);
+  color: var(--color-text-soft);
 }
 
 .header__link:hover::before {
@@ -108,13 +104,12 @@
   font-family: var(--font-mono);
   font-size: 0.75rem;
   color: var(--color-text-soft);
-  background-color: rgba(0, 255, 170, 0.04);
+  background-color: rgba(255, 255, 255, 0.02);
   transition: border-color var(--transition);
 }
 
 .header__status:hover {
-  border-color: var(--color-success);
-  box-shadow: var(--glow-success);
+  border-color: var(--color-border-bright);
 }
 
 .header__status-dot {
@@ -122,7 +117,6 @@
   height: 8px;
   border-radius: 50%;
   background-color: var(--color-success);
-  box-shadow: var(--glow-success);
   position: relative;
   flex-shrink: 0;
 }
@@ -130,17 +124,17 @@
 .header__status-dot::after {
   content: '';
   position: absolute;
-  inset: -4px;
+  inset: -3px;
   border-radius: 50%;
   background-color: var(--color-success);
   opacity: 0.4;
-  animation: ping 1.8s var(--ease-out) infinite;
+  animation: ping 2s var(--ease-out) infinite;
 }
 
 @keyframes ping {
   0% {
     transform: scale(1);
-    opacity: 0.5;
+    opacity: 0.4;
   }
   75%, 100% {
     transform: scale(2);

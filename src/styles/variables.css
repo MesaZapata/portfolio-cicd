@@ -1,74 +1,50 @@
 :root {
-  /* ============== PALETTE — NEON ============== */
-  /* Deep navy-black base */
-  --color-bg: #03030a;
-  --color-bg-soft: #07071a;
-  --color-surface: #0a0a1f;
-  --color-surface-hover: #11112c;
-  --color-elevated: #14143a;
+  /* ============== PALETTE — Pure mono ============== */
+  --color-bg: #000000;
+  --color-bg-soft: #050505;
+  --color-surface: #0a0a0a;
+  --color-surface-hover: #111111;
+  --color-elevated: #161616;
 
-  /* Borders */
-  --color-border: #1a1a3d;
-  --color-border-strong: #2a2a5c;
-  --color-border-accent: rgba(24, 255, 255, 0.45);
-  --color-border-secondary: rgba(255, 46, 108, 0.4);
+  --color-border: #1d1d1d;
+  --color-border-strong: #2e2e2e;
+  --color-border-bright: #4a4a4a;
 
-  /* Text */
-  --color-text: #ebebff;
-  --color-text-soft: #b3b3d9;
-  --color-text-muted: #6868a3;
-  --color-text-faint: #3d3d65;
+  --color-text: #ffffff;
+  --color-text-soft: #c9c9c9;
+  --color-text-muted: #888888;
+  --color-text-faint: #555555;
+  --color-text-dim: #333333;
 
-  /* Primary neon — electric cyan */
-  --color-accent: #18ffff;
-  --color-accent-hover: #5cffff;
-  --color-accent-soft: rgba(24, 255, 255, 0.12);
-  --color-accent-faint: rgba(24, 255, 255, 0.05);
-  --color-accent-text: #001019;
+  /* Single subtle accent — used sparingly */
+  --color-accent: #ffffff;
+  --color-accent-hover: #f5f5f5;
+  --color-accent-soft: rgba(255, 255, 255, 0.08);
+  --color-accent-faint: rgba(255, 255, 255, 0.04);
+  --color-accent-text: #000000;
 
-  /* Secondary neon — hot magenta */
-  --color-secondary: #ff2e6c;
-  --color-secondary-hover: #ff5d8a;
-  --color-secondary-soft: rgba(255, 46, 108, 0.12);
-  --color-secondary-faint: rgba(255, 46, 108, 0.05);
+  /* Status — kept neutral */
+  --color-success: #50e3a4;
 
-  /* Tertiary — neon violet */
-  --color-tertiary: #9d4edd;
+  /* Gradient — silver for emphasis text */
+  --gradient-silver: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #aaaaaa 50%,
+    #555555 100%
+  );
 
-  /* Success — neon mint */
-  --color-success: #00ffaa;
-  --color-success-soft: rgba(0, 255, 170, 0.18);
-
-  /* ============== NEON GLOWS ============== */
-  --glow-cyan-sm: 0 0 8px rgba(24, 255, 255, 0.5);
-  --glow-cyan:
-    0 0 16px rgba(24, 255, 255, 0.5),
-    0 0 32px rgba(24, 255, 255, 0.25);
-  --glow-cyan-lg:
-    0 0 24px rgba(24, 255, 255, 0.7),
-    0 0 48px rgba(24, 255, 255, 0.35),
-    0 0 80px rgba(24, 255, 255, 0.15);
-
-  --glow-magenta:
-    0 0 16px rgba(255, 46, 108, 0.55),
-    0 0 32px rgba(255, 46, 108, 0.3);
-  --glow-magenta-lg:
-    0 0 24px rgba(255, 46, 108, 0.7),
-    0 0 48px rgba(255, 46, 108, 0.35);
-
-  --glow-success:
-    0 0 12px rgba(0, 255, 170, 0.6),
-    0 0 24px rgba(0, 255, 170, 0.3);
-
-  --text-glow-cyan: 0 0 12px rgba(24, 255, 255, 0.6),
-    0 0 24px rgba(24, 255, 255, 0.3);
-  --text-glow-magenta: 0 0 12px rgba(255, 46, 108, 0.6),
-    0 0 24px rgba(255, 46, 108, 0.3);
+  /* Gradient — for rare CTA highlight (subtle blue, NOT neon) */
+  --gradient-iris: linear-gradient(
+    135deg,
+    #ffffff 0%,
+    #c9c9c9 100%
+  );
 
   /* ============== TYPOGRAPHY ============== */
-  --font-display: 'Bricolage Grotesque', 'Inter', system-ui, sans-serif;
-  --font-sans: 'DM Sans', system-ui, -apple-system, sans-serif;
-  --font-mono: 'JetBrains Mono', 'SF Mono', Consolas, monospace;
+  --font-display: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Geist', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Geist Mono', 'SF Mono', Consolas, monospace;
 
   /* ============== SPACING ============== */
   --space-1: 0.5rem;
@@ -105,8 +81,7 @@
   --transition-slow: 400ms var(--ease-out);
 
   /* ============== SHADOWS ============== */
-  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.5);
-  --shadow: 0 4px 16px -4px rgba(0, 0, 0, 0.6),
-    0 2px 8px -2px rgba(0, 0, 0, 0.4);
-  --shadow-lg: 0 24px 48px -12px rgba(0, 0, 0, 0.8);
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.6);
+  --shadow: 0 8px 24px -8px rgba(0, 0, 0, 0.8);
+  --shadow-lg: 0 32px 64px -16px rgba(0, 0, 0, 0.9);
 }
